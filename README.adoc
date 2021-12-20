@@ -3,5 +3,22 @@
 这个项目的自述也是首次使用adoc文件。
 
 == 有全新的、快乐的和乌七八糟的东西都会保存在这个地方
+* 一段代码
+[source,java,indent=0]
+----
+/**
+ * @author leiyunlong
+ * @since 2021/12/13 3:50 PM
+ * @version 1.0
+ */
+@RequestMapping("test")
+@RestController
+class TestController {
+    @GetMapping("hello")
+    String Test(){
+        "Hello,World"
+    }
 
+}
+----
 快乐万岁。
