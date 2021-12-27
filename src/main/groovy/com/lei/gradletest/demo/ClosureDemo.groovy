@@ -31,13 +31,19 @@ class ClosureDemo {
         ClosureTest {
             outerClosure { plugin: 'java' }
         }
+        applys plugin: 'java';
     }
 
     /**
      * ClosureTest 方法
      * @param closure
      */
-    static def void ClosureTest(Closure closure) {
+    static void ClosureTest(Closure closure) {
         closure()
+    }
+
+    static void applys(Map<String, String> map){
+        map.good = 'day' // 追加 'good':'day'
+        println map.get('plugin') //输出java
     }
 }
