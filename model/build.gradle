@@ -1,0 +1,4 @@
+// 在主模块没有配置的需要在这么配置
+test {
+    useJUnitPlatform()
+}
