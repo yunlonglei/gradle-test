@@ -10,8 +10,8 @@ plugins {
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
 }
-// springboot要打包必须要指定启动类
-bootJarMainClassName {'com.lei.web.WebApplication'}
+// springboot要打包必须要指定启动类,好像没有这句也行
+//bootJarMainClassName {'com.lei.web.WebApplication'}
 
 // allproject是所有项目的依赖
 allprojects {
