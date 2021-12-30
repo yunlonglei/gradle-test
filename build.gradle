@@ -21,7 +21,25 @@ allprojects {
     repositories {
         mavenCentral()
     }
-
+    dependencies {
+        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+    }
+    //  发布到maven仓库
+    apply plugin:'maven-publish'
+    publishing{
+        publications{
+            myPublishs(MavenPublication){
+                from components.java
+            }
+        }
+        repositories{
+            maven{
+                name "myRepo"
+                url ""
+            }
+        }
+    }
 }
 // subproject是子项目的依赖
 subprojects{
